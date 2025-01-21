@@ -4,6 +4,6 @@ layout: 最终抵达::Cyphar0
 permalink: /
 ---
 
-# Lorem ipsum
+# 蜂群崩溃症候群
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+——以下条件用以介定一个受CCD影响的蜂群：蜂巢内完全没有任何成熟的蜜蜂，蜂巢内只有少量或完全没有蜜蜂尸骸；蜂巢内有蜜蜂的幼虫；工蜂甚少遗下幼虫于巢内不顾；蜂巢内有蜂蜜及花粉积存，积存的食物并无受其他蜂类盗窃，亦没有因虫害而腐坏。引致蜂巢最后崩溃的前因包括：没有足够的工蜂照顾蜜蜂幼虫；剩余的工蜂以刚成熟的工蜂为主；蜂后仍然存在于巢内；剩余巢内的蜜蜂停止制造蜂蜜、蛋白质补充物等饲料。
