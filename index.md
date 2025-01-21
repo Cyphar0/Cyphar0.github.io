@@ -1,6 +1,6 @@
 ---
 title: 最终抵达::Cyphar0
-layout: home
+layout: 最终抵达::Cyphar0
 permalink: /
 ---
 
