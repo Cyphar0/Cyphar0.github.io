@@ -1,44 +1,121 @@
-Galileo Theme
----
+# jekyll-theme-console
 
-Another damned theme for Jekyll.
+A jekyll theme with inspiration from linux consoles for hackers, developers and script kiddies.
 
-![The Galileo Theme](https://cloud.githubusercontent.com/assets/185649/11737785/b998bd0c-a002-11e5-9c93-0ac83917f32d.png)
+<img src="https://raw.githubusercontent.com/b2a3e8/jekyll-theme-console/master/screenrec-dark.gif" width="550" title="Screenshot">
 
-Landing somewhere between a scholarly publication and an adventurers notebook, the Galileo theme presents your words & photographs in a handsome, agreeable manner.
+## Demo
 
-It is well behaved on both mobile & desktop and radically minimal in its footprint. Charged and ready for deployment to Github Pages.
+[dark style](https://b2a3e8.github.io/jekyll-theme-console-demo-dark/) ([source code](https://github.com/b2a3e8/jekyll-theme-console-demo-dark)):
 
-### In the wild
-
-Demo [here](http://travelog.io/galileo-theme/). I'm so damned fond of this theme that I also use it on [my own blog](http://travelog.io/).
-
-### Installation
-
-- Install Jekyll: `gem install jekyll`
-- [Fork this repository](https://github.com/rowanoulton/galileo-theme/fork)
-- Clone it: `git clone https://github.com/YOUR-USER/galileo-theme`
-- Run the jekyll server: `jekyll serve -w`
-
-Observe the results at <http://localhost:4000>.
-
-### Customisation
-
-Make changes in [_config.yml](https://github.com/rowanoulton/galileo-theme/blob/master/_config.yml), ye damned heathens.
-
-#### A note about fonts
-
-I've employed [Typekit](https://typekit.com/) to load both "[Adobe Caslon Pro](https://typekit.com/fonts/adobe-caslon-pro)" & "[LTC Bodoni 175](https://typekit.com/fonts/ltc-bodoni-175)". To make use of these with your own Typekit account, publish a kit and enter the ID into the Jekyll config.
-
-This _is_ optional. If you don't want to use Typekit, well _fine_, just leave the Typekit Kit ID blank. You'll need to elect and specify substitute fonts [here](https://github.com/rowanoulton/galileo-theme/blob/master/css/screen.scss#L7) and [here](https://github.com/rowanoulton/galileo-theme/blob/master/css/screen.scss#L8).
-
-### Deployment
-
-This theme is built to be deployed easily to [GitHub Pages](https://pages.github.com/).
+[<img src="https://raw.githubusercontent.com/b2a3e8/jekyll-theme-console/master/screenshot-dark.png" width="350" title="Screenshot">](https://b2a3e8.github.io/jekyll-theme-console-demo-dark/)
 
 
-### License
+[light style](https://b2a3e8.github.io/jekyll-theme-console-demo-light/) ([source code](https://github.com/b2a3e8/jekyll-theme-console-demo-light)):
 
-[MIT](https://github.com/rowanoulton/galileo-theme/blob/master/LICENSE).
+[<img src="https://raw.githubusercontent.com/b2a3e8/jekyll-theme-console/master/screenshot-light.png" width="350" title="Screenshot">](https://b2a3e8.github.io/jekyll-theme-console-demo-light/)
 
-Do whatever you damn well please with it. I'm always glad to hear what folks are doing with it though — let me know on [Twitter](https://twitter.com/rowanoulton).
+
+[hacker style](https://b2a3e8.github.io/jekyll-theme-console-demo-hacker/) ([source code](https://github.com/b2a3e8/jekyll-theme-console-demo-hacker)):
+
+[<img src="https://raw.githubusercontent.com/b2a3e8/jekyll-theme-console/master/screenshot-hacker.png" width="350" title="Screenshot">](https://b2a3e8.github.io/jekyll-theme-console-demo-hacker/)
+
+
+## Installation
+
+First, follow the steps in [this Quickstart Guide](https://jekyllrb.com/docs/) if you're starting with Jekyll from scratch. Skip this if you already have an existing jekyll project.
+
+**_You can also use the [demo site's source code](https://b2a3e8.github.io/jekyll-theme-console-demo-dark/) as template for an easy start._**
+
+### Remote theme method for GitHub Pages
+
+Use this method for sites hosted with GitHub Pages only. To install:
+
+1. Set `remote_theme` in your project's Jekyll `_config.yml` file:
+
+   ```yaml
+   remote_theme: b2a3e8/jekyll-theme-console
+   ```
+
+### Gem-based method
+
+With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
+
+This allows for easier installation and updating as you don't have to manage any of the theme files. To install:
+
+1. Add this line to your Jekyll site's `Gemfile`:
+
+   ```ruby
+   gem "jekyll-theme-console"
+   ```
+
+2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+
+   ```bash
+   bundle
+   ```
+
+3. Set `theme` in your project's Jekyll `_config.yml` file:
+
+   ```yaml
+   theme: jekyll-theme-console
+   ```
+
+To update the theme run `bundle update`.
+
+## Usage
+
+### _config.yaml
+
+In addition to jekyll's default configuration options, you can provide:
+- `header_pages` to specify which pages should be displayed in navbar
+- `footer` string, which will be inserted on the end of the page (doesn't support markup, but html)
+- `google_analytics` tracking id (tracking will be enabled only in production environments and only if you set this option, no Google Analytics code will be loaded if you don't set this option)
+- `listen_for_clients_preferred_style` boolean, used to allow users to choose light or dark style based on their preferences (mostly affected by OS dark or light theme, details see https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- `style` to specify which predefined style (colors) should be used
+
+```yaml
+header_pages:
+  - index.md
+  - about.md
+
+style: dark # dark (default), light or hacker
+listen_for_clients_preferred_style: true # false (default) or true
+
+footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
+
+google_analytics: UA-NNNNNNNN-N
+```
+
+### front matter variables
+
+Besides the predefined [front matter](https://jekyllrb.com/docs/front-matter/) variables from jekyll this theme also supports following variables:
+- `title` to set a title for the page
+- `lang` to specify the language, defaults to 'en'
+- `robots` to control the robot meta tag ([details](http://longqian.me/2017/02/12/jekyll-robots-configuration/)) - this may be useful for example to set `NOINDEX` to tag pages
+
+## Customization
+
+If you want to customize this theme, follow this steps:
+1. Fork this repository (you can use the fork as your own theme or directly as your website)
+2. Create or modify files in `_layouts` directory for html-based changes
+3. Create or modify files in `_sass` and `assets` for css-based changes
+   - You can change things which are used in light and dark theme (like font-size) in `_sass/base.scss`. You'll find style variables at the top.
+   - Style-specific definitions are in `_sass/_dark.scss` respectively in `_sass/_light.scss`. You can change things like background-color there.
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/b2a3e8/jekyll-theme-console. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-console.gemspec` accordingly.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
