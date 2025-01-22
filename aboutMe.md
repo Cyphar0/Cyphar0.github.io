@@ -1,6 +1,6 @@
 ---
 title: aboutMe
-layout: home
+layout: default
 permalink: /me?/
 ---
 
@@ -38,5 +38,4 @@ permalink: /me?/
 ニニニニニニニニニニア゛　 　 　 　 　 ＼　　　　　　　`'＜　　　　　　　　　　　　 　 　 　 　 　 　 　 　 | ｝┼┼┼┼┤i　 ヤ:|:::::::i;;;;;|:::::::::::|ﾆﾆ|
 
 ```
-
 
