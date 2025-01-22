@@ -2,8 +2,61 @@
 title: index
 layout: home
 permalink: /
+meta_title: 最终抵达::Cyphar0
 ---
 
-# Lorem ipsum
+# 最终抵达::Cyphar0
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
+                            +-------------------------------+
+                            |          CPU (ALU)            |
+                            |  [Add]  [Sub]  [Mul]  [Div]   |---------+
+                            +-------->|         Control Unit          |
+                            |         +-------------------------------+
+                    +-------------+ 
+                    |    Register |                     
+                    |  [AX: 0011] |                     
+                    |  [BX: 0101] |                     +-------------------+
+                    |  [CX: 1001] |                     |    Stack (LIFO)   |
+                    +-------------+                     |   +----------+    |
+                                |                       |   |  [0x7F]  |    |
+                                |    Stack (LIFO)       |   |  [0x5E]  |    |
+                                |    +----------+       |   |  [0x3C]  |    |
+                                +--> |  [0x7F]  |       |   |__________|    |
+                                     |  [0x5E]  |       |                   |
+                                     |  [0x3C]  |       |                   |
+                                     |__________|       +-------------------+
+                                |                       |
+                                |    Queue (FIFO)       |
+                                |    +----------+       |
+                                +--> |  [0x8A]  |       |
+                                     |  [0x4D]  |       |
+                                     |  [0x3B]  |       |
+                                     |__________|       |
+                                                        |
+                                     +--------------------+        
+                                     | Primary Memory     |
+                                     | [RAM: 4GB DDR4]    |
+                                     | [Cache: 512KB]     |
+                                     +--------------------+
+                                              |   
+                                              |  Bus (Data/Address/Control) 
+                                              +-------------------------------+
+                                                             |
+                                     +--------------------+  | 
+                                     |  Secondary Storage |  |
+                                     |  [SSD: 512GB]      |  |
+                                     +--------------------+  |
+                                                             |
+                                     +---------------------+ |
+                                     |  Internet/Cloud     | |
+                                     |     Storage         | |
+                                     |   +-----------+     | |
+                                     |   |   Cloud   |     | |
+                                     |   |___________|     | |
+                                     +---------------------+ |
+                                                             |
+                                                            / \
+                                                           /   \
+                                                          /_____\
+```

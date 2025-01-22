@@ -1,0 +1,49 @@
+/* 美化代码块 */
+pre {
+    background-color: #2d2d2d; /* 深色背景 */
+    color: #f8f8f2;           /* 浅色字体 */
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.95em;
+    font-family: "Courier New", Courier, monospace; /* 代码字体 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+code {
+    font-family: "Courier New", Courier, monospace; /* 内联代码字体 */
+    background-color: #f4f4f4; /* 浅灰背景 */
+    color: #e83e8c;           /* 区分内联代码的颜色 */
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* 美化图片 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 博文正文 */
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 1.1em;
+    font-family: "Arial", sans-serif;
+    color: #333;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
